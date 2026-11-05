@@ -22,6 +22,7 @@ Inspect meaningful interactions in the browser; follow the behavioral checks in 
 - Check internal anchors, local assets, resource links, and duplicate IDs.
 - Verify keyboard access, visible focus, semantic buttons, image text alternatives, and useful media labels. Add captions/transcripts when the supplied speech/content requires them and assets are available.
 - Verify that the catalog uses the intended staged-loading behavior and does not start all videos at once.
+- For long-video navigation, verify a late seek on incompletely buffered media with a range-capable preview server; confirm the actual frame/time reached. See the specific checks in [video-patterns.md](video-patterns.md).
 - Confirm there are no new console errors from the page implementation; separate third-party or network failures in the report.
 - Verify metadata: title, description, preview image and canonical URL when known. Never put guessed production URLs into published metadata.
 - Remove sample authors, template prompts, test-only markers, inherited analytics IDs, and dead resource buttons before publication.

@@ -29,6 +29,8 @@ Keep the shared prompt, method labels, and relevant settings visible near the gr
 
 For tall comparison players, put method labels before the video or in a persistent unobtrusive label so a visitor does not need to scroll past the result to identify it. Inspect this at the actual viewport; a caption below a large player can fall out of view. For minute-scale results, consider a few labeled common-time checkpoints alongside the continuous timeline so visitors can inspect later behavior without watching from the beginning. Derive timestamps from verified media time and preserve playback speed; checkpoints are navigation aids, not cherry-picked proof of global consistency.
 
+Separate catalog breadth from inspection size. If a many-method grid makes the relevant detail too small, offer a larger pair with a visible baseline selector or an explicit enlargement mode. Keep every compared method reachable. When switching methods for the same prompt, retaining the inspected timestamp can help; preserve it only when timelines have a meaningful shared basis, and visibly reset it when the input changes.
+
 Useful group controls: play/pause all, restart all, optional speed selection, and a shared timeline when the clips share meaningful time alignment. Hide unnecessary controls. A long-video comparison may benefit from elapsed time or selected aligned checkpoints, but never invent physical time from unknown fps.
 
 Do not claim frame synchronization merely because several `play()` calls happen together. Use **coordinated playback** as the default promise. When temporal alignment is important, implement a shared clock/leader, coordinated seeking and drift correction, and test with actual clips. Document any limitation caused by different fps, encodes, or browser scheduling.
@@ -51,6 +53,10 @@ Long prompts are expandable text, not hover-only content. Use an accessible butt
 
 For multi-prompt or interactive examples, preserve the ordered prompt sequence and timing when supplied. Do not display a joined paragraph in a way that implies a single prompt. Keep seed, resolution, guidance, and other protocol details available when needed for interpretation.
 
+When instruction changes are the effect being evaluated, show the current timed prompt beside the player and offer jumps to supplied boundaries, while keeping the complete sequence expandable. Derive this from the actual schedule, not equal divisions guessed from video length. Distinguish a chapter's requested action from an assertion that the output successfully performs it.
+
+Hour/day-scale media may need a representative local preview and separately labeled full-length hosting links. Preserve split-part order and any documented upload compression. A shorter showcase or selected excerpt does not represent the full time span unless its mapping is known; label it with its own duration and prompt.
+
 ## Loading and presentation
 
 - Avoid downloading every large clip on initial load. Stage media loading by visible/selected groups; usually use posters and `preload="none"` or `metadata` according to need.
@@ -70,5 +76,7 @@ Use actual local media when available. Verify:
 5. Different durations, aspect ratios, and slow metadata loading behave as designed.
 6. Prompt expansion, category selection, and controls work with keyboard and on a narrow touchscreen layout.
 7. Initial page load does not request the whole video catalog; decorative animation can be reduced or paused.
+
+For long clips, test a late seek before the whole file has downloaded. Verify the actual media time after `seeked`, not merely the slider or success message. A local server without byte-range support can appear to work on fully buffered short clips while silently returning long clips to the beginning. Test using suitable media serving, and show an unsuccessful-seek state when the requested position is not reached.
 
 Report these as implemented-and-tested, implemented-but-untested, or unavailable. Do not claim playback correctness from HTML inspection alone.

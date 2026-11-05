@@ -35,8 +35,10 @@ Large local inputs and generated trial artifacts live in `outputs/benchmarks/` (
 - [Recent sample selection](recent-projects.md)
 - [Helios paper brief](helios-brief.md)
 - [Helios baseline/revision observations and verification limits](helios-review.md)
+- [Echo-Infinity paper brief](echo-brief.md)
+- [Echo-Infinity second iteration and transfer checks](echo-review.md)
 
-Helios has a working local baseline and first revision. Echo-Infinity and SAGE-GRPO PDFs and source markup have been collected; their pages and transfer evaluations are pending.
+Helios and Echo-Infinity have working local baselines and revisions with actual media. Echo tests the first iteration in a different light-gallery design and adds a second iteration for larger comparison views, timed prompts and reliable late seeking. SAGE-GRPO's PDF and source markup have been collected; its page and transfer evaluation are pending.
 
 ## Local reproduction
 
@@ -47,4 +49,5 @@ Python dependencies for these optional research scripts: requests, pymupdf, beau
 3. Run `benchmarks/prepare_helios.py` to fetch the selected original videos and probe their metadata.
 4. Run `benchmarks/generate_helios.py --version baseline` once to freeze the first draft, then `benchmarks/generate_helios.py --version revised` for the current version. Baseline generation refuses to overwrite an existing baseline.
 5. Optionally run `benchmarks/prepare_review_fixtures.py` for the deliberate failure test and original-source layout snapshot. The snapshot's note describes its differences from the live site.
-6. Serve `outputs/benchmarks/` with a local HTTP server; inspect `/helios/revised/`. Keep the parent `assets/` directory with the page. These study pages and third-party media are not published by the skill installer.
+6. Run `benchmarks/prepare_echo.py`, then `benchmarks/generate_echo.py --version baseline` once and `benchmarks/generate_echo.py --version revised`. `benchmarks/prepare_echo_snapshot.py` builds an optional layout-only original-source snapshot, with playback disabled and limitations documented beside it.
+7. Run `benchmarks/serve_media.py --port 8767` to serve `outputs/benchmarks/` on loopback with byte-range support. Inspect `/helios/revised/` and `/echo-infinity/revised/`. Ordinary Python `http.server` did not support late seeking on incompletely buffered long videos in this study. Keep each parent `assets/` directory with its page. Study pages and third-party media are not published by the skill installer.

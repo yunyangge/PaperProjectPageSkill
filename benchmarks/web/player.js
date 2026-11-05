@@ -103,9 +103,23 @@ async function seek(value,restart=false) {
   const results=await Promise.allSettled(active.map(ready));
   if(token!==epoch)return;
   if(results.some(r=>r.status==='rejected')){status.textContent='Unable to seek all clips. Retry loading.';return;}
-  active.forEach(v=>v.currentTime=Math.min(value,Math.max(0,v.duration-.05)));
+  const sought=await Promise.allSettled(active.map(v=>seekVideo(v,value)));
+  if(token!==epoch)return;
+  if(sought.some(r=>r.status==='rejected')){status.textContent='A clip cannot reach that time yet. Try after it loads, or open the original.';return;}
   timeline.value=value;stamp.textContent=`${time(value)} / ${time(end)}`;status.textContent='Paused at selected time.';
   if(resume||restart) await play();
+}
+function seekVideo(video,value) {
+  const target=Math.min(value,Math.max(0,video.duration-.05));
+  if(Math.abs(video.currentTime-target)<.05)return Promise.resolve();
+  return new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>finish(new Error('seek timeout')),10000);
+    const finish=error=>{clearTimeout(timer);video.removeEventListener('seeked',done);video.removeEventListener('error',bad);error?reject(error):resolve();};
+    const done=()=>finish(Math.abs(video.currentTime-target)<.25?null:new Error('seek not reached'));
+    const bad=()=>finish(new Error('media'));
+    video.addEventListener('seeked',done,{once:true});video.addEventListener('error',bad,{once:true});
+    video.currentTime=target;
+  });
 }
 root.querySelector('[data-action=restart]').onclick=()=>seek(0,true);
 timeline.addEventListener('change',()=>seek(Number(timeline.value)));

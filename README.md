@@ -137,7 +137,7 @@ python install_skill.py --upgrade
 
 **尚未完成真实论文从素材到发布的完整试跑。** 参考站点的视觉观察不等于逐项播放测试，设计规则也不代表每次生成的页面自动合格。每个页面仍需用实际素材验证效果、播放行为与发布结果。
 
-正在进行[近期论文实测](benchmarks/README.md)：主样本为 Helios、Echo-Infinity、SAGE-GRPO。Helios 已完成论文简报、本地页面首版与一次修订，并检查了真实视频播放、共同时间定位、提示词切换和缺失视频处理。原站对照采用保留样式与字体的本地源码快照，网络嵌入未验证；其余两篇及跨案例迁移验证仍在进行。详见[观察记录与验证边界](benchmarks/helios-review.md)。研究视频/PDF 仅在本地保存，不随 skill 分发。
+正在进行[近期论文实测](benchmarks/README.md)：主样本为 Helios、Echo-Infinity、SAGE-GRPO。Helios 与 Echo-Infinity 已完成论文简报、真实素材页面首版与修订，覆盖深色展示和浅色画廊；已检查联动播放、后段定位、快速切换、手机布局及定时提示词。Echo 将手机对比视频从约 149 像素放大到 310 像素，并修复本地长片定位误报成功的问题。原站视觉对照采用保留样式与字体的本地源码快照，原站完整播放体验未验证；SAGE-GRPO 迁移检查仍待完成。详见 [Helios 记录](benchmarks/helios-review.md)与 [Echo 记录](benchmarks/echo-review.md)。研究视频/PDF 仅在本地保存，不随 skill 分发。
 
 ## 仓库导航
 

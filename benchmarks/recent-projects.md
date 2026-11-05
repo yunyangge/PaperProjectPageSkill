@@ -21,7 +21,7 @@
 
 ## 当前证据与进度
 
-三篇主样本的 PDF 已下载并提取文字：Helios 39 页、Echo-Infinity 21 页、SAGE-GRPO 17 页。Helios 已完成[论文简报](helios-brief.md)、7 段素材核验、页面首版及[第一轮修订检查](helios-review.md)。另两篇的完整阅读笔记、页面生成与对比尚未完成。此前旧样本的下载结果不计入新样本完成度。
+三篇主样本的 PDF 已下载并提取文字：Helios 39 页、Echo-Infinity 21 页、SAGE-GRPO 17 页。Helios 已完成[论文简报](helios-brief.md)、7 段素材核验、页面首版及[第一轮修订检查](helios-review.md)。Echo-Infinity 也已完成[论文简报](echo-brief.md)、7 段素材核验、浅色页面首版与[第二轮修订及迁移检查](echo-review.md)。SAGE-GRPO 的完整阅读笔记、页面生成与对比尚未完成。此前旧样本的下载结果不计入新样本完成度。
 
 2026-11-05 查询 Semantic Scholar，按 arXiv ID 匹配：
 

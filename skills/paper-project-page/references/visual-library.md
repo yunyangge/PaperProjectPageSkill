@@ -2,6 +2,8 @@
 
 Reviewed 2026-11-05. The first four sites are core design references. They express a range of aesthetics, not a ranked list. No single one is the default. Add new references with source links and the specific decision they improve.
 
+When seeking recent examples, verify the paper's first-publication date separately from its conference year. Prioritize recent projects that demonstrate the relevant media and interactions; citation totals are supplementary and should not exclude new work. Older templates below remain implementation references, not substitutes for contemporary project-page taste.
+
 Visual notes below are our interpretation of the rendered pages. These sites have not undergone a full implementation or performance audit. Some remote videos did not load in the inspection browser; do not mistake blank or loading tiles for intentional design or assume all playback behavior was verified.
 
 ## Core project-page references

@@ -62,6 +62,7 @@ Method prose should connect an observable effect to the relevant idea. A compact
 - Give important media enough size to inspect. Do not fill a desktop row with so many tiny videos that the claimed difference becomes invisible.
 - Preserve aspect ratios and comparison scale. Preview cropping is acceptable only when it does not remove the phenomenon being demonstrated and full inspection remains available; scientific comparison frames should retain relevant content.
 - Let controls appear in predictable places. An attractive poster must still make playback discoverable. Hover effects supplement touch/keyboard controls.
+- Check the hero's play affordance in the first viewport along with the poster. A large visible video whose only play button sits below the fold still delays the first useful effect; an unobtrusive, keyboard-accessible overlay can solve this without shrinking the media.
 - Use motion sparingly outside the demonstrations. Several moving backgrounds, marquees, and autoplay groups compete with the result the visitor is supposed to watch.
 - Let density change with device size. Mobile may show fewer previews with explicit expansion instead of shrinking every desktop tile.
 
