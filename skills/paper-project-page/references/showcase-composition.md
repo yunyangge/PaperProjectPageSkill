@@ -27,6 +27,8 @@ Choose one lead rather than giving every element equal emphasis. A wide teaser, 
 
 The opening should let visitors answer: what does this project do, where is an example, and where can I get the paper/code? Do not require a decorative transition, slow intro animation, or long abstract first. If media is not ready, a meaningful poster and clear play/loading state should preserve the composition.
 
+Judge the mobile opening independently of the desktop one. A two-column desktop hero can become a long stack of title, prose, authors, affiliations and resource buttons before any media appears. Reflow these elements when necessary: keep essential identity and primary resources together, and place a complete readable author block immediately after the demonstration if that better serves the page. Measure and inspect the first useful media's actual position; shrinking all text is not the remedy.
+
 ## Page rhythm
 
 A useful sequence, adapted to the paper:

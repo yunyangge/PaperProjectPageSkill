@@ -138,6 +138,8 @@ The initial version has undergone skill-structure validation, installer tests, a
 
 **A complete real-paper-to-published-site trial has not yet been performed.** Visual inspection of reference sites is not comprehensive playback testing, and design instructions do not automatically guarantee the quality of generated pages. Each site must be checked using its actual assets and deployment target.
 
+A [recent-paper study](benchmarks/README.md) is in progress using Helios, Echo-Infinity, and SAGE-GRPO. Helios has a paper brief, a local baseline, and one revision, with real-media checks for playback, common-time seeking, prompt switching, and missing-video handling. The original-site comparison uses a local source snapshot retaining styles and fonts; remote embeds remain unverified. The other two cases and cross-case transfer checks are pending. See the [observations and verification limits](benchmarks/helios-review.md). Research PDFs/videos remain local and are not distributed with the skill.
+
 ## Repository guide
 
 ```text

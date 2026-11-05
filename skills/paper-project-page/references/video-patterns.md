@@ -6,6 +6,8 @@ Give video interaction particular care. Choose modules by the scientific questio
 
 Use stable media IDs and comparison-group IDs. Keep records for file/URL, poster, task, method, prompt ID and text, display label, aspect ratio, duration/fps when known, and source/settings. Unknown values remain unknown. Multiple methods compared on a prompt share a group; visually similar clips alone are not enough.
 
+For real-time generation papers, distinguish generation throughput, encoded playback FPS, and the represented duration. Put hardware/resolution and model-variant conditions beside throughput claims. A showcase without a stated variant cannot automatically substantiate the distilled model's quality. Probe actual files: a shared prompt does not establish matching resolutions, seeds or sampling settings.
+
 Distinguish these views:
 
 - **Showcase:** representative examples demonstrating variety; selection may be curated and should not imply aggregate superiority.
@@ -24,6 +26,8 @@ Cards should offer a visible route to play, pause, inspect, and read the prompt.
 ## Same-prompt comparisons
 
 Keep the shared prompt, method labels, and relevant settings visible near the group. Use aligned columns or a responsive grouped layout. On mobile, preserve the relation between input and outputs; do not turn the group into indistinguishable unlabeled cards.
+
+For tall comparison players, put method labels before the video or in a persistent unobtrusive label so a visitor does not need to scroll past the result to identify it. Inspect this at the actual viewport; a caption below a large player can fall out of view. For minute-scale results, consider a few labeled common-time checkpoints alongside the continuous timeline so visitors can inspect later behavior without watching from the beginning. Derive timestamps from verified media time and preserve playback speed; checkpoints are navigation aids, not cherry-picked proof of global consistency.
 
 Useful group controls: play/pause all, restart all, optional speed selection, and a shared timeline when the clips share meaningful time alignment. Hide unnecessary controls. A long-video comparison may benefit from elapsed time or selected aligned checkpoints, but never invent physical time from unknown fps.
 
