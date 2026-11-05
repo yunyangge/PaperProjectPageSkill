@@ -33,6 +33,8 @@ Separate catalog breadth from inspection size. If a many-method grid makes the r
 
 Useful group controls: play/pause all, restart all, optional speed selection, and a shared timeline when the clips share meaningful time alignment. Hide unnecessary controls. A long-video comparison may benefit from elapsed time or selected aligned checkpoints, but never invent physical time from unknown fps.
 
+For short clips with subtle motion differences, optional slow review can help. Default to the original rate, display the selected rate, and apply it equally to the compared clips. Verify actual rates after initial loading and selection changes: setting a rate before loading alone may be reset by the player. This is an inspection aid, not evidence of the original motion speed.
+
 Do not claim frame synchronization merely because several `play()` calls happen together. Use **coordinated playback** as the default promise. When temporal alignment is important, implement a shared clock/leader, coordinated seeking and drift correction, and test with actual clips. Document any limitation caused by different fps, encodes, or browser scheduling.
 
 For different durations, choose and disclose the behavior: stop at the common endpoint, or let finished tiles remain on their last frame. Looping each clip independently is inappropriate when it would make the comparison misleading. Never alter speed or trim one method silently to make it look better.

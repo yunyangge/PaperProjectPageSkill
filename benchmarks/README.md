@@ -1,6 +1,6 @@
 # Paper-to-page improvement study
 
-Status: active; resumed with revised sample selection on 2026-11-05 (Asia/Shanghai).
+Status: three-case local study completed on 2026-11-05 (Asia/Shanghai). See [results and verification boundaries](study-results.md).
 
 Objective: use influential video-generation papers to generate original project pages from their PDFs, compare the generated pages with the authors' sites, revise the skill from observed failures, and test the revisions in subsequent pages.
 
@@ -37,8 +37,11 @@ Large local inputs and generated trial artifacts live in `outputs/benchmarks/` (
 - [Helios baseline/revision observations and verification limits](helios-review.md)
 - [Echo-Infinity paper brief](echo-brief.md)
 - [Echo-Infinity second iteration and transfer checks](echo-review.md)
+- [SAGE-GRPO paper brief](sage-brief.md)
+- [SAGE-GRPO third case and transfer checks](sage-review.md)
+- [Cross-case results](study-results.md)
 
-Helios and Echo-Infinity have working local baselines and revisions with actual media. Echo tests the first iteration in a different light-gallery design and adds a second iteration for larger comparison views, timed prompts and reliable late seeking. SAGE-GRPO's PDF and source markup have been collected; its page and transfer evaluation are pending.
+All three cases have working local baselines and revisions with actual media. Echo tests the first iteration in a different light-gallery design and adds a second iteration for larger comparison views, timed prompts and reliable late seeking. SAGE transfers these choices to an editorial comparison-led page and checks mobile ordering, short-clip slow review and independent comparison groups. Each review records actual observations and limits; this is not a public deployment or comprehensive accessibility certification.
 
 ## Local reproduction
 
@@ -50,4 +53,6 @@ Python dependencies for these optional research scripts: requests, pymupdf, beau
 4. Run `benchmarks/generate_helios.py --version baseline` once to freeze the first draft, then `benchmarks/generate_helios.py --version revised` for the current version. Baseline generation refuses to overwrite an existing baseline.
 5. Optionally run `benchmarks/prepare_review_fixtures.py` for the deliberate failure test and original-source layout snapshot. The snapshot's note describes its differences from the live site.
 6. Run `benchmarks/prepare_echo.py`, then `benchmarks/generate_echo.py --version baseline` once and `benchmarks/generate_echo.py --version revised`. `benchmarks/prepare_echo_snapshot.py` builds an optional layout-only original-source snapshot, with playback disabled and limitations documented beside it.
-7. Run `benchmarks/serve_media.py --port 8767` to serve `outputs/benchmarks/` on loopback with byte-range support. Inspect `/helios/revised/` and `/echo-infinity/revised/`. Ordinary Python `http.server` did not support late seeking on incompletely buffered long videos in this study. Keep each parent `assets/` directory with its page. Study pages and third-party media are not published by the skill installer.
+7. Run `benchmarks/prepare_sage.py`, then `benchmarks/generate_sage.py --version baseline` once and `benchmarks/generate_sage.py --version revised`. Optionally run `benchmarks/prepare_sage_fixtures.py` for its layout snapshot and deliberate missing-video fixture.
+8. Run `benchmarks/check_pages.py helios echo-infinity sage-grpo` for static artifact checks.
+9. Run `benchmarks/serve_media.py --port 8767` to serve `outputs/benchmarks/` on loopback with byte-range support. Inspect `/helios/revised/`, `/echo-infinity/revised/` and `/sage-grpo/revised/`. Ordinary Python `http.server` did not support late seeking on incompletely buffered long videos in this study. Keep each parent `assets/` directory with its page. Study pages and third-party media are not published by the skill installer. Stop the temporary server after inspection.

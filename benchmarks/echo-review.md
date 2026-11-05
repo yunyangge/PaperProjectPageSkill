@@ -43,7 +43,7 @@ Not all acceptance cases were repeated here: the deliberate missing-video fixtur
 
 ## Original-site comparison and limits
 
-The live site loaded far enough to inspect DOM/layout measurements: 104 video elements and no document-width overflow at desktop. Its screenshot call then timed out. This is an observation about this inspection environment, **not a measured live-site performance verdict**.
+The live site loaded far enough to inspect DOM/layout measurements: 104 video elements and no document-width overflow at desktop. Its first desktop screenshot was saved successfully and inspected; a follow-up screenshot call timed out. This is an observation about this inspection environment, **not a measured live-site performance verdict**.
 
 For visual comparison, a separate local snapshot retains the author's HTML/CSS/JS, fonts and 75 original posters. Video and iframe playback are deliberately disabled; YouTube thumbnails remain remote. Snapshot screenshots were successfully inspected at 1440×900 and 390×844. This supports layout comparison, not original playback verification.
 
@@ -54,4 +54,4 @@ For visual comparison, a separate local snapshot retains the author's HTML/CSS/J
 
 ## Skill changes supported here
 
-Helios rules successfully transferred to a light page without importing its dark style: mobile reflow, labels before videos, and separating generation throughput from playback fps. New narrow guidance covers inspection size versus overview density, retaining meaningful time across method switches, visible timed prompts, split long-form hosting, first-viewport play affordance, and late-seek verification on a suitable media server. SAGE-GRPO remains the next transfer case; the full three-paper goal is not yet complete.
+Helios rules successfully transferred to a light page without importing its dark style: mobile reflow, labels before videos, and separating generation throughput from playback fps. New narrow guidance covers inspection size versus overview density, retaining meaningful time across method switches, visible timed prompts, split long-form hosting, first-viewport play affordance, and late-seek verification on a suitable media server. The subsequent [SAGE-GRPO case](sage-review.md) tests transfer to an editorial comparison-led page.

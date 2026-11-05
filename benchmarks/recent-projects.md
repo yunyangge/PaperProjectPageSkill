@@ -21,12 +21,12 @@
 
 ## 当前证据与进度
 
-三篇主样本的 PDF 已下载并提取文字：Helios 39 页、Echo-Infinity 21 页、SAGE-GRPO 17 页。Helios 已完成[论文简报](helios-brief.md)、7 段素材核验、页面首版及[第一轮修订检查](helios-review.md)。Echo-Infinity 也已完成[论文简报](echo-brief.md)、7 段素材核验、浅色页面首版与[第二轮修订及迁移检查](echo-review.md)。SAGE-GRPO 的完整阅读笔记、页面生成与对比尚未完成。此前旧样本的下载结果不计入新样本完成度。
+三篇主样本均已完成 PDF 正文/附录阅读、素材核验、页面首版、原站对照与修订检查：Helios 39 页、7 段视频；Echo-Infinity 21 页、7 段视频；SAGE-GRPO 17 页、10 段视频。分别见 [Helios 简报](helios-brief.md)与[检查](helios-review.md)、[Echo 简报](echo-brief.md)与[检查](echo-review.md)、[SAGE 简报](sage-brief.md)与[检查](sage-review.md)。参考文献未逐条外部核验。此前旧样本的下载结果不计入新样本完成度。
 
 2026-11-05 查询 Semantic Scholar，按 arXiv ID 匹配：
 
 - [Helios](https://www.semanticscholar.org/paper/4e7b7508ac30aed492f667cfc6e34b05872e8891)：78 citations，15 influential citations。
 - [Echo-Infinity](https://www.semanticscholar.org/paper/335ebd446d1351b77c4e9af3056971b6eac980e7)：11 citations，1 influential citation。同日 OpenAlex 对同一 DOI 仅返回 1 citation，不能混用为一致口径。
-- SAGE-GRPO 的两项索引查询均遇到 HTTP 429，引用量暂未核实。
+- [SAGE-GRPO](https://www.semanticscholar.org/paper/cf4c32be282e10f9c3093c107a44d0bd501c7f5a)：14 citations，2 influential citations。初次查询遇到 HTTP 429，后续成功返回已按 arXiv ID 核对，保存于本地 `sources/semantic_scholar.json`。
 
 计数仅反映各索引在查询时的收录，不等于完整引用总量，也不作为网页审美水平的证据。原始返回及 PDF 哈希保存在被 Git 忽略的 `outputs/benchmarks/<slug>/sources/provenance.json`。

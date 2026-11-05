@@ -137,7 +137,7 @@ python install_skill.py --upgrade
 
 **尚未完成真实论文从素材到发布的完整试跑。** 参考站点的视觉观察不等于逐项播放测试，设计规则也不代表每次生成的页面自动合格。每个页面仍需用实际素材验证效果、播放行为与发布结果。
 
-正在进行[近期论文实测](benchmarks/README.md)：主样本为 Helios、Echo-Infinity、SAGE-GRPO。Helios 与 Echo-Infinity 已完成论文简报、真实素材页面首版与修订，覆盖深色展示和浅色画廊；已检查联动播放、后段定位、快速切换、手机布局及定时提示词。Echo 将手机对比视频从约 149 像素放大到 310 像素，并修复本地长片定位误报成功的问题。原站视觉对照采用保留样式与字体的本地源码快照，原站完整播放体验未验证；SAGE-GRPO 迁移检查仍待完成。详见 [Helios 记录](benchmarks/helios-review.md)与 [Echo 记录](benchmarks/echo-review.md)。研究视频/PDF 仅在本地保存，不随 skill 分发。
+已完成[三篇近期论文的本地实测与迭代](benchmarks/study-results.md)：Helios、Echo-Infinity、SAGE-GRPO，分别采用深色展示、浅色画廊和图文展示方向。每篇都有 PDF 阅读简报、真实素材首版、原站对照与修订；检查覆盖联动播放、后段定位、快速切换、手机布局、定时提示词和短片慢放。Echo 的手机比较宽度约 149→310 像素；SAGE 验证了大幅比较对与独立分组控制的迁移。原站观察结合实际页面及保留样式的本地快照，未验证其全部播放体验。详见 [Helios](benchmarks/helios-review.md)、[Echo](benchmarks/echo-review.md)、[SAGE](benchmarks/sage-review.md) 的检查记录与限制。研究视频/PDF 仅在本地保存，不随 skill 分发。
 
 ## 仓库导航
 

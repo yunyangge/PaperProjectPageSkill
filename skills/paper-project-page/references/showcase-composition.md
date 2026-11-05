@@ -29,6 +29,8 @@ The opening should let visitors answer: what does this project do, where is an e
 
 Judge the mobile opening independently of the desktop one. A two-column desktop hero can become a long stack of title, prose, authors, affiliations and resource buttons before any media appears. Reflow these elements when necessary: keep essential identity and primary resources together, and place a complete readable author block immediately after the demonstration if that better serves the page. Measure and inspect the first useful media's actual position; shrinking all text is not the remedy.
 
+For a comparison-led opening, check which result actually appears first on mobile. A tall baseline card can push the proposed result out of view even when the group begins early. Consider a labeled result-first arrangement or another compact paired view, while keeping reading/focus order coherent. Replace a tall stack of selector buttons with a labeled compact control when it helps the media remain visible; do not hide which example is selected.
+
 ## Page rhythm
 
 A useful sequence, adapted to the paper:
